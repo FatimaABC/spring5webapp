@@ -12,7 +12,9 @@ public class Book {
 
     private String title;
     private String isbn;
-    private String publisher;
+
+    @ManyToOne
+    private Publisher publisher;
 
 
     @ManyToMany
@@ -54,11 +56,11 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public String getPublisher() {
+    public Publisher getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(String publisher) {
+    public void setPublisher(Publisher publisher) {
         this.publisher = publisher;
     }
 
